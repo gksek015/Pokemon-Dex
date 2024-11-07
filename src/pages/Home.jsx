@@ -9,11 +9,12 @@ const HomeContainer = styled.div`
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: #8C8CFF;
+    background-color: white;
 `;
 
-const Title = styled.h1`
-    font-size: 50px;
+const HomeImg = styled.img`
+    width: 800px;
+    height: 300px;
 `
 
 const HomeButton = styled.button`
@@ -30,7 +31,7 @@ const Home = () => {
 
   return (
     <HomeContainer>
-        <Title>나만의 포켓몬 도감</Title>
+        <HomeImg src="/pokemon-logo-RN0wntMB.png"/>
         <HomeButton onClick={handleStartButton}>시작하기</HomeButton>
     </HomeContainer>
   )
