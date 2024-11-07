@@ -6,22 +6,25 @@ const DashboardContainer = styled.div`
     top: 0;
     left: 0;
     width: 100%;
+    height: 250px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: white;
+    background-color: black;
     z-index: 10;
 `;
 
 const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 20px;
     width: 150px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
 `;
 
