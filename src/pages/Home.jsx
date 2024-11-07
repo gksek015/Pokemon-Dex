@@ -9,7 +9,16 @@ const HomeContainer = styled.div`
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    background-color: #8C8CFF;
+`;
+
+const Title = styled.h1`
+    font-size: 50px;
+`
+
+const HomeButton = styled.button`
     background-color: #C8C8FF;
+    border-color: white;
 `
 
 const Home = () => {
@@ -21,8 +30,8 @@ const Home = () => {
 
   return (
     <HomeContainer>
-        <h1>나만의 포켓몬 도감</h1>
-        <button onClick={handleStartButton}>시작하기</button>
+        <Title>나만의 포켓몬 도감</Title>
+        <HomeButton onClick={handleStartButton}>시작하기</HomeButton>
     </HomeContainer>
   )
 }
