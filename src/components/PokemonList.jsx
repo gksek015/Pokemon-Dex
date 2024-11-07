@@ -21,4 +21,4 @@ const PokemonList = ({onAddPokemon}) => {
   )
 }
 
-export default PokemonList
+export default PokemonList;
