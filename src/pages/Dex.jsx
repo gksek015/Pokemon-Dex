@@ -31,7 +31,7 @@ const handleRemovePokemon = (id) => {
   return (
     <div>
         <DashBoard selectedPokemon={selectedPokemon} handleRemovePokemon={handleRemovePokemon}/>
-        <PokemonList onAddPokemon={addPokemon}/>
+        <PokemonList addPokemon={addPokemon}/>
     </div>
   )
 }

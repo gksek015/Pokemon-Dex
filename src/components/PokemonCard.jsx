@@ -22,7 +22,7 @@ padding: 20px;
 margin: 10px;
 `
 
-const PokemonCard = ({pokemon, onAdd}) => {
+const PokemonCard = ({pokemon, addPokemon}) => {
     const navigate = useNavigate();
 
     const handleGoToDetail = () => {
@@ -30,7 +30,7 @@ const PokemonCard = ({pokemon, onAdd}) => {
     };
 
     const handleAddButton = () => {
-        onAdd(pokemon);
+        addPokemon(pokemon);
     }
 
   return (

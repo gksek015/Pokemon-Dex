@@ -10,11 +10,11 @@ const CardList = styled.div`
     padding: 20px;
 `
 
-const PokemonList = ({onAddPokemon}) => {
+const PokemonList = ({addPokemon}) => {
   return (
     <CardList>
         {MOCK_DATA.map(pokemon => (
-            <PokemonCard key={pokemon.id} pokemon={pokemon} onAdd={onAddPokemon}/>
+            <PokemonCard key={pokemon.id} pokemon={pokemon} addPokemon={addPokemon}/>
         ))}
     </CardList>
   )
