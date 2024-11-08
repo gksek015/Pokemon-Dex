@@ -17,8 +17,10 @@ const addPokemon = (pokemon) => {
         return;
     }
 
-    if (selectedPokemon.length <= 6 && !selectedPokemon.includes(pokemon)) {
+    if (selectedPokemon.length < 6) {
         setSelectedPokemon([...selectedPokemon, pokemon]);
+    } else {
+        alert ("포켓몬은 최대 6개까지 선택할 수 있습니다.")
     }
 } 
 

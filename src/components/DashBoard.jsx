@@ -2,17 +2,17 @@
 import styled from "styled-components"
 
 const DashboardContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 250px;
+    position: relative;
     width: 80%;
+    max-width: 1200px;
     padding: 20px;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     background-color: black;
+    border-radius: 5px;
+    justify-content: center;
 `;
 
 const CardContainer = styled.div`
@@ -38,6 +38,7 @@ const DashBoard = ({selectedPokemon, handleRemovePokemon}) => {
   return (
     <div>
         <DashboardContainer>
+            <h2>나만의 포켓몬 도감</h2>
             {selectedPokemon.map((pokemon) => (
                 <CardContainer key={pokemon.id}>
                     <img src={pokemon.img_url} alt={pokemon.korean_name}/>
