@@ -22,11 +22,15 @@ const addPokemon = (pokemon) => {
     } else {
         alert ("포켓몬은 최대 6개까지 선택할 수 있습니다.")
     }
-} 
+};
+
+const handleRemovePokemon = (id) => {
+    setSelectedPokemon(selectedPokemon.filter((pokemon) => pokemon.id !== id));
+}
 
   return (
     <div>
-        <DashBoard selectedPokemon={selectedPokemon}/>
+        <DashBoard selectedPokemon={selectedPokemon} handleRemovePokemon={handleRemovePokemon}/>
         <PokemonList onAddPokemon={addPokemon}/>
     </div>
   )

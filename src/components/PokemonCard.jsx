@@ -29,7 +29,7 @@ const PokemonCard = ({pokemon, onAdd}) => {
         navigate(`/pokemon/${pokemon.id}`);
     };
 
-    const handleAddButton = () =>{
+    const handleAddButton = () => {
         onAdd(pokemon);
     }
 
