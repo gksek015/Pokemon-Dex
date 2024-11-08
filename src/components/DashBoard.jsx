@@ -13,6 +13,9 @@ const DashboardContainer = styled.div`
     background-color: black;
     border-radius: 5px;
     justify-content: center;
+    img {
+        max-width: 50px;
+    }
 `;
 
 const CardContainer = styled.div`
@@ -35,17 +38,27 @@ const RemoveButton = styled.button`
 `
 
 const DashBoard = ({selectedPokemon, handleRemovePokemon}) => {
+//const array = Array.from({length: 6}, () => null);
+
   return (
     <div>
         <DashboardContainer>
             <h2>나만의 포켓몬 도감</h2>
-            {selectedPokemon.map((pokemon) => (
-                <CardContainer key={pokemon.id}>
+            {selectedPokemon.map((pokemon) => {
+                return (
+                    <CardContainer key={pokemon.id}>
                     <img src={pokemon.img_url} alt={pokemon.korean_name}/>
                     <h4>{pokemon.korean_name}</h4>
                     <RemoveButton onClick={() => handleRemovePokemon(pokemon.id)}>삭제</RemoveButton>
                 </CardContainer>
-            ))}
+                );
+            })}
+            {new Array(6-selectedPokemon.length).fill(null).map((_, index) => {
+                return (
+                    <img 
+                        src="https://react-6-pokemon.vercel.app/assets/pokeball-13iwdk7Y.png" alt="" key={index}/>
+                );
+            })}
         </DashboardContainer>
     </div>
   )
