@@ -2,17 +2,17 @@
 import styled from "styled-components"
 
 const DashboardContainer = styled.div`
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 250px;
+    width: 80%;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     background-color: black;
-    z-index: 10;
 `;
 
 const CardContainer = styled.div`

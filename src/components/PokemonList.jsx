@@ -8,7 +8,7 @@ const CardList = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    padding-top: 300px;
+    transform: translateY(250px);
 `
 
 const PokemonList = ({onAddPokemon}) => {

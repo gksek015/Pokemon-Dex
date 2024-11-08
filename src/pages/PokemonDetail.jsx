@@ -21,7 +21,7 @@ const DetailImg = styled.img`
 `;
 
 const DetailButton = styled.button`
-    border-color: #DECEAE;
+    background-color: #DECEAE;
     border-radius: 5px;
 `
 
