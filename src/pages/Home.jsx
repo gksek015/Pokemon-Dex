@@ -7,8 +7,6 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
     background-color: white;
 `;
 
@@ -18,8 +16,9 @@ const HomeImg = styled.img`
 `
 
 const HomeButton = styled.button`
-    background-color: #C8C8FF;
+    background-color: #4F5902;
     border-color: white;
+    color: white;
 `
 
 const Home = () => {
