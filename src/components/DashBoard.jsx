@@ -13,8 +13,11 @@ const DashboardContainer = styled.div`
     background-color: black;
     border-radius: 5px;
     justify-content: center;
+    flex-direction: row;
     img {
         max-width: 50px;
+        border: 2px dashed rgb(204,204,204);
+        border-radius: 5px;
     }
 `;
 
@@ -38,7 +41,6 @@ const RemoveButton = styled.button`
 `
 
 const DashBoard = ({selectedPokemon, handleRemovePokemon}) => {
-//const array = Array.from({length: 6}, () => null);
 
   return (
     <div>

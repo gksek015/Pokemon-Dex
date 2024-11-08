@@ -43,9 +43,6 @@ const PokemonDetail = () => {
         setPokemon(fetchPokemon);
     }, [id])
 
-    // if (!pokemon) {
-    //     return null;
-    // } 
 
     return (
         <>
