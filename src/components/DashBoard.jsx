@@ -1,5 +1,7 @@
 //import React from 'react'
+import { useContext } from "react";
 import styled from "styled-components"
+import { PokemonContext } from "../context/Context";
 
 const DashboardContainer = styled.div`
     position: relative;
@@ -74,7 +76,8 @@ const RemoveButton = styled.button`
     width: 100px;
 `
 
-const DashBoard = ({selectedPokemon, handleRemovePokemon}) => {
+const DashBoard = () => {
+    const {selectedPokemon, handleRemovePokemon} = useContext(PokemonContext);
 
   return (
     <div>

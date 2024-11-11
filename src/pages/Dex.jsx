@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import DashBoard from '../components/DashBoard'
 import PokemonList from '../components/PokemonList'
+import { PokemonContext } from '../context/Context';
 
 const Dex = () => {
 
@@ -30,8 +31,11 @@ const handleRemovePokemon = (id) => {
 
   return (
     <div>
-        <DashBoard selectedPokemon={selectedPokemon} handleRemovePokemon={handleRemovePokemon}/>
-        <PokemonList addPokemon={addPokemon}/>
+        <PokemonContext.Provider value={{selectedPokemon, handleRemovePokemon, addPokemon}}>
+            <DashBoard />
+            <PokemonList addPokemon={addPokemon}/>
+        </PokemonContext.Provider>
+        
     </div>
   )
 }
