@@ -35,7 +35,7 @@ const Inside = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #807663;
+    border: 2px dashed #735026;
     border-radius: 5px;
 `;
 

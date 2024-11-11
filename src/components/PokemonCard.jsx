@@ -20,6 +20,11 @@ width: 100px;
 text-align: center;
 padding: 20px;
 margin: 10px;
+transform: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+&:hover {
+    transform: scale(1.05);
+}
 `;
 
 const AddButton = styled.button`
