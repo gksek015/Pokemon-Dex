@@ -10,7 +10,7 @@ const CardList = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #F2E2CE;
+    background-color: #FFF5E0;
     border-radius: 5px;
     width: 100%;
 `;

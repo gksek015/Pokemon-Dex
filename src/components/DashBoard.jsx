@@ -9,7 +9,7 @@ const DashboardContainer = styled.div`
     padding: 20px;
     margin: 20px auto;
     display: flex;
-    background-color: #F2E2CE;
+    background-color: #FFF5E0;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
@@ -17,7 +17,7 @@ const DashboardContainer = styled.div`
 `;
 
 const Title = styled.h2`
-    color: #807663;
+    color: #735026;
     font-size: 24px;
     margin-bottom: 20px;
 `;
@@ -52,7 +52,7 @@ const CardContainer = styled.div`
     padding: 20px;
     width: 100px;
     text-align: center;
-    background-color: #CCBD9F;
+    background-color: #DECEAE;
     border-radius: 5px;
     border: 1px solid #FFF5E0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
