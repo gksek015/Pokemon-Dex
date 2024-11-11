@@ -33,7 +33,7 @@ const handleRemovePokemon = (id) => {
     <div>
         <PokemonContext.Provider value={{selectedPokemon, handleRemovePokemon, addPokemon}}>
             <DashBoard />
-            <PokemonList addPokemon={addPokemon}/>
+            <PokemonList/>
         </PokemonContext.Provider>
         
     </div>
