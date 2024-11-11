@@ -21,8 +21,9 @@ const DetailImg = styled.img`
 `;
 
 const DetailButton = styled.button`
-    background-color: #DECEAE;
+    background-color: #735026;
     border-radius: 5px;
+    color: white;
 `
 
 const PokemonDetail = () => {

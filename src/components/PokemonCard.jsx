@@ -14,12 +14,17 @@ align-items: center;
 justify-content: center;
 border: 1px solid white;
 border-radius: 5px;
-background-color: white;
+background-color: #DECEAE;
 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 width: 100px;
 text-align: center;
 padding: 20px;
 margin: 10px;
+`;
+
+const AddButton = styled.button`
+    background-color: #735026;
+    color: white;
 `
 
 const PokemonCard = ({pokemon, addPokemon}) => {
@@ -39,7 +44,7 @@ const PokemonCard = ({pokemon, addPokemon}) => {
             <img src={pokemon.img_url} alt={pokemon.korean_name} onClick={handleGoToDetail}/>
         <h3>{pokemon.korean_name}</h3>
         <p>NO. {pokemon.id}</p>
-        <button onClick={handleAddButton}>추가</button>
+        <AddButton onClick={handleAddButton}>추가</AddButton>
         </Card>
     </CardContainer>
   )
