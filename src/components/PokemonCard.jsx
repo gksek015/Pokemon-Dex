@@ -12,7 +12,7 @@ grid-gap: 10px;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-border: 1px solid white;
+border: 1px solid #FFF5E0;
 border-radius: 5px;
 background-color: #DECEAE;
 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
