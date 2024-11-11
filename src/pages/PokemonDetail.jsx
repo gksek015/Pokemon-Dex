@@ -1,17 +1,39 @@
-//import React from 'react'
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
-import styled from 'styled-components'
+import { useNavigate, useParams } from 'react-router-dom'
+import styled, { createGlobalStyle } from 'styled-components'
 import MOCK_DATA from '../MOCK_DATA';
+
 
 const DetailContainer = styled.div`
     text-align: center;
     margin-top: 20px;
+`;
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        background-color: #FFF5E0;
+    }
+`;
+
+const DetailImg = styled.img`
+    width: 200px;
+    height: 200px;
+`;
+
+const DetailButton = styled.button`
+    background-color: #735026;
+    border-radius: 5px;
+    color: white;
 `
 
 const PokemonDetail = () => {
     const { id } = useParams();
     const [pokemon, setPokemon] = useState();
+    const navigate = useNavigate();
+
+    const handleBackButton = () =>{
+        navigate('/dex');
+    }
 
     const getPokemonId = (id) => {
     return MOCK_DATA.find((pokemon) => pokemon.id === Number(id));
@@ -22,20 +44,20 @@ const PokemonDetail = () => {
         setPokemon(fetchPokemon);
     }, [id])
 
-    // if (!pokemon) {
-    //     return null;
-    // } 
 
     return (
-    <DetailContainer>
-        <img src={pokemon?.img_url} alt={pokemon?.korean_name}/>
-        <h1>{pokemon?.korean_name}</h1>
+        <>
+        <GlobalStyle/>
+        <DetailContainer>
+        <DetailImg src={pokemon?.img_url} alt={pokemon?.korean_name}/>
+        <h2>{pokemon?.korean_name}</h2>
         <p>{pokemon?.description}</p>
         <p>타입 : {pokemon?.types.join(", ")}</p>
-    </DetailContainer>
+        <DetailButton onClick={handleBackButton}>뒤로가기</DetailButton>
+        </DetailContainer>
+    </>
   )
     }
 ;
-
 
 export default PokemonDetail
