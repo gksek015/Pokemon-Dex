@@ -12,7 +12,8 @@ const CardList = styled.div`
     padding: 20px;
     background-color: #F2E2CE;
     border-radius: 5px;
-`
+    width: 100%;
+`;
 
 const PokemonList = () => {
   const {addPokemon} = useContext(PokemonContext);
