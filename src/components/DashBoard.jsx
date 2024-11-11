@@ -9,7 +9,7 @@ const DashboardContainer = styled.div`
     padding: 20px;
     margin: 20px auto;
     display: flex;
-    background-color: black;
+    background-color: #F2E2CE;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
@@ -17,14 +17,14 @@ const DashboardContainer = styled.div`
 `;
 
 const Title = styled.h2`
-    color: white;
+    color: #807663;
     font-size: 24px;
     margin-bottom: 20px;
 `;
 
 const InsideCard = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     margin-bottom: 20px;
 `;
@@ -35,7 +35,7 @@ const Inside = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed gray;
+    border: 2px dashed #807663;
     border-radius: 5px;
 `;
 
@@ -50,30 +50,27 @@ const CardContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 150px;
+    width: 120px;
     text-align: center;
-    background-color: green;
-    border: 1px solid white;
+    background-color: #CCBD9F;
     border-radius: 5px;
+    box-shadow: 0 0 2px;
 `;
 
 const PokemonImg = styled.img`
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #fff;
+    width: 100px;
+    height: 100px;
 `;
 
 const PokemonName = styled.h4`
-    color: white;
-    margin-bottom: 10px;
+    color: #735026;
+    margin-bottom: 20px;
 `;
 
 const RemoveButton = styled.button`
-    background-color: red;
+    background-color: #735026;
     color: white;
-    width: 100px;
+    width: 80px;
 `
 
 const DashBoard = () => {
