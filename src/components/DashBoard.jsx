@@ -76,6 +76,7 @@ const RemoveButton = styled.button`
 const DashBoard = () => {
     const dispath = useDispatch();
     const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
+    
     const handleRemovePokemon = (pokemonId) => {
         dispath(removePokemon(pokemonId));
     }
