@@ -2,8 +2,8 @@
 import PokemonCard from './PokemonCard'
 import MOCK_DATA from '../MOCK_DATA'
 import styled from 'styled-components'
-import { useContext } from 'react'
-import { PokemonContext } from '../context/Context'
+import { useDispatch } from 'react-redux'
+import { addPokemon } from '../slices/pokemonSlice'
 
 const CardList = styled.div`
     display: flex;
@@ -16,12 +16,16 @@ const CardList = styled.div`
 `;
 
 const PokemonList = () => {
-  const {addPokemon} = useContext(PokemonContext);
+  const dispath = useDispatch();
+
+  const handleAddButton = (pokemon) => {
+    dispath(addPokemon(pokemon));
+}
 
   return (
     <CardList>
         {MOCK_DATA.map(pokemon => (
-            <PokemonCard key={pokemon.id} pokemon={pokemon} addPokemon={addPokemon}/>
+            <PokemonCard key={pokemon.id} pokemon={pokemon} handleAddButton={handleAddButton}/>
         ))}
     </CardList>
   )

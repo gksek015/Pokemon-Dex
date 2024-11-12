@@ -1,6 +1,8 @@
 // import React from 'react'
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { addPokemon } from '../slices/pokemonSlice';
 
 const CardContainer = styled.div`
     margin-top: 20px;
@@ -32,7 +34,8 @@ const AddButton = styled.button`
     color: white;
 `
 
-const PokemonCard = ({pokemon, addPokemon}) => {
+const PokemonCard = ({pokemon}) => {
+    const dispath = useDispatch();
     const navigate = useNavigate();
 
     const handleGoToDetail = () => {
@@ -40,7 +43,7 @@ const PokemonCard = ({pokemon, addPokemon}) => {
     };
 
     const handleAddButton = () => {
-        addPokemon(pokemon);
+        dispath(addPokemon(pokemon));
     }
 
   return (

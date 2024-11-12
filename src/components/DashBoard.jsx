@@ -1,7 +1,6 @@
-//import React from 'react'
-import { useContext } from "react";
 import styled from "styled-components"
-import { PokemonContext } from "../context/Context";
+import { useDispatch, useSelector } from "react-redux";
+import { removePokemon } from "../slices/pokemonSlice";
 
 const DashboardContainer = styled.div`
     position: relative;
@@ -75,7 +74,11 @@ const RemoveButton = styled.button`
 `
 
 const DashBoard = () => {
-    const {selectedPokemon, handleRemovePokemon} = useContext(PokemonContext);
+    const dispath = useDispatch();
+    const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
+    const handleRemovePokemon = (pokemonId) => {
+        dispath(removePokemon(pokemonId));
+    }
 
   return (
     <div>
