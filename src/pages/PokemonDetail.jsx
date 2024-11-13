@@ -1,30 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
-import styled, { createGlobalStyle } from 'styled-components'
 import MOCK_DATA from '../MOCK_DATA';
+import { GlobalStyle, DetailContainer, DetailImg, DetailButton } from '../styled/PokemonDetailStyle';
 
 
-const DetailContainer = styled.div`
-    text-align: center;
-    margin-top: 20px;
-`;
-
-const GlobalStyle = createGlobalStyle`
-    body {
-        background-color: #FFF5E0;
-    }
-`;
-
-const DetailImg = styled.img`
-    width: 200px;
-    height: 200px;
-`;
-
-const DetailButton = styled.button`
-    background-color: #735026;
-    border-radius: 5px;
-    color: white;
-`
 
 const PokemonDetail = () => {
     const { id } = useParams();
