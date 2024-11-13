@@ -1,6 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removePokemon } from "../slices/pokemonSlice";
-import { DashboardContainer, Title, InsideCard, CardContainer, PokemonImg, PokemonName, RemoveButton, Inside, PokeBall } from "../styled/DashboardStyle";
+import {
+    DashboardContainer,
+    Title, InsideCard,
+    CardContainer,
+    PokemonImg,
+    PokemonName,
+    RemoveButton,
+    Inside, PokeBall } from "../styled/DashboardStyle";
 
 
 const DashBoard = () => {
